@@ -9,7 +9,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+      padding: const EdgeInsets.fromLTRB(16, 12, 16, 16),
       children: [
         Center(
           child: Container(
@@ -55,6 +55,14 @@ class Profile extends StatelessWidget {
               title: 'Email',
               subtitle: 'oladoyinemmanuel@gmail.com',
               icon: Icons.email,
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            const SettingsTile(
+              title: 'VoterID No.',
+              subtitle: 'hhjvkaoigffj-1ganbg-1234',
+              icon: Icons.card_membership,
             ),
             const SizedBox(
               height: 24,
