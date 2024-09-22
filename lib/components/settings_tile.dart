@@ -14,7 +14,7 @@ class SettingsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       leading: Icon(icon, color: Colors.white),
       title: Text(
         title,

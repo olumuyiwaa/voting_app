@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../components/button.dart';
 import '../components/settings_tile.dart';
 
 class Profile extends StatelessWidget {
@@ -13,8 +13,8 @@ class Profile extends StatelessWidget {
       children: [
         Center(
           child: Container(
-            width: 300,
-            height: 300,
+            width: 280,
+            height: 280,
             alignment: Alignment.bottomRight,
             padding: const EdgeInsets.only(right: 16, bottom: 16),
             decoration: BoxDecoration(
@@ -31,7 +31,7 @@ class Profile extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 40,
+          height: 32,
         ),
         Column(
           children: [
@@ -41,7 +41,7 @@ class Profile extends StatelessWidget {
               icon: Icons.person_2,
             ),
             const SizedBox(
-              height: 12,
+              height: 8,
             ),
             const SettingsTile(
               title: 'Mobile Number',
@@ -49,7 +49,7 @@ class Profile extends StatelessWidget {
               icon: Icons.phone_android,
             ),
             const SizedBox(
-              height: 12,
+              height: 8,
             ),
             const SettingsTile(
               title: 'Email',
@@ -57,7 +57,7 @@ class Profile extends StatelessWidget {
               icon: Icons.email,
             ),
             const SizedBox(
-              height: 12,
+              height: 8,
             ),
             const SettingsTile(
               title: 'VoterID No.',
@@ -65,34 +65,16 @@ class Profile extends StatelessWidget {
               icon: Icons.card_membership,
             ),
             const SizedBox(
-              height: 24,
+              height: 20,
             ),
-            SizedBox(
-              width: 240,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.all(16),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4),
-                    )),
-                onPressed: () {},
-                child: const Row(
-                  children: [
-                    Icon(
-                      Icons.edit,
-                      color: Colors.black,
-                      size: 20,
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    Text(
-                      'Modify Basic Informations',
-                      style: TextStyle(color: Colors.black),
-                    )
-                  ],
-                ),
+            GestureDetector(
+              child: const Button(
+                background: Colors.white,
+                icontextColor: Colors.black,
+                text: 'Modify Basic Information',
+                icon: Icons.edit,
               ),
+              onTap: () {},
             )
           ],
         )
