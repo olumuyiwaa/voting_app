@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../welcome.dart';
-//import '../session.dart';
 
 void main() {
   runApp(const VotingApp());

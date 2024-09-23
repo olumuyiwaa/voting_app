@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:voting_app/Auth/sign_in.dart';
-import 'package:voting_app/components/button.dart';
+import '../Auth/sign_in.dart';
+import '../auth/sign_up.dart';
+import '../components/button.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({super.key});
@@ -39,7 +40,7 @@ class Welcome extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => const SignIn()));
+                          builder: (BuildContext context) => const SignUp()));
                 },
                 child: const Button(
                   background: Colors.white,
