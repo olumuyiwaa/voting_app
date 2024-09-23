@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:voting_app/components/button.dart';
+import '../auth/sign_up.dart';
+import '../components/button.dart';
 import '../session.dart';
 
 class SignIn extends StatelessWidget {
@@ -60,19 +61,27 @@ class SignIn extends StatelessWidget {
           const SizedBox(
             height: 12,
           ),
-          const Row(
+           Row(
             children: [
-              Text(
+              const  Text(
                 "Don't have an accout?",
                 style: TextStyle(color: Colors.white),
               ),
-              SizedBox(
+              const  SizedBox(
                 width: 8,
               ),
-              Text(
-                'Register',
-                style: TextStyle(color: Colors.blue),
-              ),
+
+              GestureDetector(
+                  child: const Text(
+                    'Sign Up',
+                    style: TextStyle(color: Colors.blue),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => const SignUp()));
+                  }),
             ],
           )
         ],

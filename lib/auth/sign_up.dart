@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import '../Auth/sign_in.dart';
+import '../components/button.dart';
+import '../session.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
@@ -13,15 +16,15 @@ class SignUp extends StatelessWidget {
     ),
     body: ListView(        padding: const EdgeInsets.all(16),
 
-      children: const[
-         Padding(
+      children: [
+        const Padding(
         padding: EdgeInsets.symmetric(vertical: 40),
-        child: Image(
-            fit: BoxFit.fitWidth, image: AssetImage('assets/login.webp')),
+        child: Image(height: 300,
+            fit: BoxFit.fitHeight, image: AssetImage('assets/registrations.png')),
       ),
-        Text('Sign Up Form', style: TextStyle(color: Colors.white, fontSize: 24),),
-        SizedBox(height: 12,),
-        TextField(
+    const Text('Sign Up Form', style: TextStyle(color: Colors.white, fontSize: 24),),
+    const   SizedBox(height: 12,),
+    const   TextField(
             style: TextStyle(color: Colors.white),
             cursorColor: Colors.white,
             decoration: InputDecoration(
@@ -29,8 +32,8 @@ class SignUp extends StatelessWidget {
                 labelText: 'Full Name',
                 hintText: 'Firstname and Surname',
                 hintStyle: TextStyle(color: Colors.white54),
-                labelStyle: TextStyle(color: Colors.white))),SizedBox(height: 8,),
-        TextField(
+                labelStyle: TextStyle(color: Colors.white))),const SizedBox(height: 8,),
+    const    TextField(
             style: TextStyle(color: Colors.white),
             cursorColor: Colors.white,
             decoration: InputDecoration(
@@ -39,8 +42,8 @@ class SignUp extends StatelessWidget {
                 hintText: 'Choose a Username',
                 hintStyle: TextStyle(color: Colors.white54),
                 labelStyle: TextStyle(color: Colors.white))),
-        SizedBox(height: 8,),
-        TextField(
+    const   SizedBox(height: 8,),
+    const   TextField(
             style: TextStyle(color: Colors.white),
             cursorColor: Colors.white,
             decoration: InputDecoration(
@@ -49,8 +52,8 @@ class SignUp extends StatelessWidget {
                 prefix: Text('+234'),
                 hintText: '123456789',
                 hintStyle: TextStyle(color: Colors.white54),
-                labelStyle: TextStyle(color: Colors.white))),SizedBox(height: 8,),
-        TextField(
+                labelStyle: TextStyle(color: Colors.white))),const SizedBox(height: 8,),
+    const  TextField(
             style: TextStyle(color: Colors.white),
             cursorColor: Colors.white,
             decoration: InputDecoration(
@@ -59,7 +62,62 @@ class SignUp extends StatelessWidget {
                 hintText: 'username@server.com',
                 hintStyle: TextStyle(color: Colors.white54),
                 labelStyle: TextStyle(color: Colors.white))),
+    const   SizedBox(height: 8,),
+    const   TextField(
+            style: TextStyle(color: Colors.white),
+            cursorColor: Colors.white,
+            obscureText: true,
+            decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Password',
+                labelStyle: TextStyle(color: Colors.white))),
+    const   SizedBox(height: 8,),
+       const TextField(
+            style: TextStyle(color: Colors.white),
+            cursorColor: Colors.white,
+            obscureText: true,
+            decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Password',
+                labelStyle: TextStyle(color: Colors.white))),
+    const SizedBox(height: 40,),
+    GestureDetector(
+    child: const Button(
+    background: Colors.blue,
+    icontextColor: Colors.white,
+    text: 'Sign Up',
+    icon: Icons.app_registration,),
+    onTap: () {
+    Navigator.push(
+    context,
+    MaterialPageRoute(
+    builder: (BuildContext context) => const Session()));
+  }),
+    const SizedBox(
+    height: 12,
+    ),
+     Row(
+    children: [
+    const Text(
+    "Do you have an account?",
+    style: TextStyle(color: Colors.white),
+    ),
+    const SizedBox(
+    width: 8,
+    ),
+      GestureDetector(
+          child: const Text(
+            'Sign In',
+            style: TextStyle(color: Colors.blue),
+          ),
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (BuildContext context) => const SignIn()));
+          }),
+
 ],
-    ),);
+    ),const SizedBox(height: 40,)],));
   }
 }
